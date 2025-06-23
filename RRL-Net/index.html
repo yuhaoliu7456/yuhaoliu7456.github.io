@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Recasting Regional Lighting for Shadow Removal">
+  <meta name="keywords" content="Shadow Removal, Computer Vision, Image Processing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recasting Regional Lighting for Shadow Removal</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css">
+  <link rel="icon" href="../../static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../../static/js/fontawesome.all.min.js"></script>
+  <script src="../../static/js/bulma-carousel.min.js"></script>
+  <script src="../../static/js/bulma-slider.min.js"></script>
+  <script src="../../static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Recasting Regional Lighting for Shadow Removal</h1>
+            <h2 class="subtitle is-3 publication-subtitle">AAAI 2024 (Oral)</h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yuhaoliu7456.github.io/">Yuhao Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://zhke.io/">Zhanghan Ke</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://kkbless.github.io/">Ke Xu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en">Fang Liu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Zhenwei Wang<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.cityu.edu.hk/~rynson/">Rynson W.H. Lau</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>City University of Hong Kong</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.00341" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <img src="teaser.png" class="interpolation-image" style="width: 100%;" />
+            <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+              Method Overview. Given a shadow image I_s and a shadow mask I_m as input, the proposed method first 
+              decomposes the shadow image into a reflectance layer R_s and an illumination layer L_s via the shadow-aware 
+              decomposition network. R_s, L_s, and image features through skip-connections are then fed into the bilateral 
+              correction network for lighting correction via the Local Lighting Correction (LLC) module to generate the 
+              shadow-free lighting L̂_s, and texture restoration via the Illumination-Guided Texture Restoration (IGTR) module, 
+              and output the prediction Î.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Shadow removal aims to restore the occluded area by shadows to have similar illumination as the non-shadow area. 
+              The key challenge is to harmonize the lighting in the shadow region with the rest of the image. Existing shadow 
+              removal methods often cast this as an image-to-image translation problem, without explicitly modeling the lighting. 
+              Recent methods tried to address this by estimating a single global lighting parameter or by decomposing an image 
+              into reflectance and illumination layers. However, they often fail to handle complex real-world shadows due to 
+              the locally varying lighting conditions. In this work, we propose a new deep learning approach for shadow removal. 
+              The key idea is to recast the shadow region by recovering locally appropriate lighting, referred to as regional 
+              lighting. Our method consists of two sub-networks: a shadow-aware decomposition network that decomposes the input 
+              image into reflectance and illumination layers, and a bilateral correction network that refines both layers. 
+              Extensive experiments show that our method achieves better results compared to state-of-the-art shadow removal methods.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method</h2>
+      <div class="content has-text-centered">
+        <img src="pipeline.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 20px; text-align: justify;">
+          Detailed architecture of our RRL-Net, showing the shadow-aware decomposition network and bilateral correction network.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <div class="content has-text-centered">
+        <img src="results.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 10px; text-align: justify;">
+          Qualitative comparison with state-of-the-art shadow removal methods. Our method produces more natural shadow-free results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{liu2024recasting,
+  title={Recasting Regional Lighting for Shadow Removal},
+  author={Liu, Yuhao and Ke, Zhanghan and Xu, Ke and Liu, Fang and Wang, Zhenwei and Lau, Rynson W.H.},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2024}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/yuhaoliu7456/RRL-Net" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This webpage template is based on <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We sincerely thank the authors for sharing the template.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

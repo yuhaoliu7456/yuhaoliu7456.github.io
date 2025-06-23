@@ -1,0 +1,467 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8"> 
+    <title>Yuhao Liu, CS</title>
+    <meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <link rel="icon" href="img/3d.svg">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <meta http-equiv="cleartype" content="on">
+    <style>
+      .publication-authors {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .publication-authors br {
+        display: none;
+      }
+      .publication-image {
+        width: 200px !important;
+        height: 100px !important;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        vertical-align: top;
+      }
+      .publication-item {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      .publication-item .image-container {
+        flex: 0 0 200px;
+        margin-right: 20px;
+      }
+      .publication-item .content-container {
+        flex: 1;
+        min-width: 0;
+      }
+      .news-container {
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 10px;
+        border: 1px solid #f0f0f0;
+        border-radius: 8px;
+        background-color: transparent;
+        margin-bottom: 20px;
+      }
+      .news-container::-webkit-scrollbar {
+        width: 8px;
+      }
+      .news-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+      .news-container::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+      }
+      .news-container::-webkit-scrollbar-thumb:hover {
+        background: #a1a1a1;
+      }
+      .news-container ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .news-container li {
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+      .publication-authors a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+      .publication-authors a:hover {
+        text-decoration: underline !important;
+      }
+      /* Globe Widget 样式控制 */
+      #globe-container {
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      #globe-container iframe {
+        max-width: 300px !important;
+        max-height: 300px !important;
+        transform: scale(0.8);
+        transform-origin: center;
+      }
+      #globe-container canvas,
+      #globe-container div,
+      #globe-container * {
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+</style>
+</head>
+
+  <body>
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item ">
+              <a class="nav-link" href="#top">
+                Home
+              </a>
+            </li>
+            <!-- <li class="nav-item ">
+              <a class="nav-link" href="#News">
+                News
+              </a>
+            </li> -->
+            <li class="nav-item ">
+              <a class="nav-link" href="#Experiences">
+                Experiences
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#Publications">
+                Publications
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#Service">
+                Service
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#Awards">
+                Awards
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="http://schema.org/Person">
+          <div class="author__avatar"> <img src="img/profile.jpg" class="author__avatar" alt="Yuhao Liu"></div>
+          <div class="author__content">
+            <h3 class="author__name">Yuhao Liu</h3>
+            <p class="author__bio">Ph.D. student @<a href="https://www.cityu.edu.hk/" target="_blank">CityUHK</a></p>
+          </div>
+          <div class="author__urls-wrapper">
+            <ul class="author__urls social-icons">
+              <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>Hong Kong, China</li>
+              <li><a href="mailto:yuhaoliu7456@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> yuhaoliu7456@gmail.com</a></li>
+              <li><a href="https://github.com/yuhaoliu7456" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i> https://github.com/yuhaoliu7456</a></li>
+              <li><a href="https://scholar.google.com.hk/citations?user=eHWiGU8AAAAJ&hl=en"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text" >
+            <p></p>
+            <p>I'm Yuhao, a third-year Ph.D. candidate at the <a href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a>, 
+              supervised by <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Prof. Rynson W.H. Lau</a>. 
+              Previously, I obtained my master's degree from Dalian University of Technology.
+              My research interests focus on <strong>image and video generation/editing</strong>. 
+              I'm open to collaborations and discussions, so feel free to drop me an email if you're interested.</p>
+
+            <p style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #2196F3; margin: 15px 0;">
+              <strong>[May. 2025]</strong> I am actively seeking job opportunities. If you think I'm a good fit, please contact me via <a href="mailto:yuhaoliu7456@gmail.com">yuhaoliu7456@gmail.com</a>
+            </p>
+
+            <h5 id="News">News</h5>
+            <div class="news-container">
+              <ul>
+                <li>[2025.02] 2 papers were accepted by CVPR 2025.</li>
+                <li>[2024.09] 1 paper was accepted by NeurIPS 2024.</li>
+                <li>[2024.06] 1 paper was accepted by MIA.</li>
+                <li>[2024.06] 1 paper was accepted by IEEE TMI.</li>
+                <li>[2024.02] 1 paper was accepted by CVPR 2024.</li>
+                <li>[2023.12] 2 papers were accepted by AAAI 2024.</li>
+                <li>[2023.08] 1 paper was accepted by IEEE TIP.</li>
+                <li>[2023.07] 1 paper was accepted by ICCV 2023.</li>
+                <li>[2023.03] 1 paper was accepted by CVPR 2023.</li>
+                <li>[2022.03] 1 paper was accepted by IEEE TIP.</li>
+                <li>[2021.07] 1 paper was accepted by ICCV 2021.</li>
+                <li>[2020.02] 1 paper was accepted by CVPR 2020.</li>
+              </ul>
+            </div>
+
+            <h5 id="Experiences">Experiences</h5>
+            <p>
+              <strong>Research Intern</strong>, <a href="https://hunyuan.tencent.com/" target="_blank">Hunyuan3D</a>, Tencent, supervised by <a href="https://tengfei-wang.github.io/" target="_blank">Tengfei Wang</a>
+              <br>
+              <em>Large-World Model</em>
+              <br>
+              Apr. 2025 - now
+            </p>
+            <p>
+              <strong>Research Intern</strong>, <a href="https://www.shlab.org.cn/" target="_blank">Shanghai AI Lab</a>, supervised by <a href="https://tengfei-wang.github.io/" target="_blank">Tengfei Wang</a>
+              <br>
+              <em>Video Editing</em>
+              <br>
+              Jun. 2024 - Mar. 2025
+            </p>
+            
+
+            <h5 id="Publications">Publications</h5>
+            <p style="font-size:14px; color:#666; margin-bottom:20px; font-style:italic;">
+              * denotes equal contribution; † denotes corresponding author
+            </p>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/cvpr25_vodiff.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">VODiff: Controlling Object Visibility Order in Text-to-Image Generation</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Dong Liang, Jinyuan Jia, <b>Yuhao Liu</b>†, Zhanghan Ke, Hongbo Fu, Rynson W. H. Lau</span>
+                  <br>
+                  Computer Vision and Pattern Recognition Conference (CVPR), 2025
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/cvpr25-LGSOR.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Language-Guided Salient Object Ranking</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Fang Liu, <b>Yuhao Liu</b>, Ke Xu, Shuquan Ye, Gerhard Petrus Hancke, Rynson W. H. Lau</span>
+                  <br>
+                  Computer Vision and Pattern Recognition Conference (CVPR), 2025
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/neurips24-pcnet.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Weakly Supervised Referring Image Segmentation via Progressive Comprehension</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Zaiquan Yang, <b>Yuhao Liu</b>†, Jiaying Lin, Gerhard Petrus Hancke, Rynson W. H. Lau</span>
+                  <br>
+                  Advances in Neural Information Processing Systems (NeurIPS), 2024
+                  <br>
+                  <!-- <a href="#" target="_blank">[Project]</a> -->
+                  <a href="https://arxiv.org/abs/2410.01544" target="_blank">[Paper]</a>
+                </p>
+              </div>
+            </div>
+            <!-- <div class="publication-item">
+              <div class="image-container">
+                <img src="image/MIA.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Multi-Grained Contrastive Representation Learning for Label-Efficient Lesion Segmentation and Onset Time Classification of Acute Ischemic Stroke</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Jiarui Sun, <b>Yuhao Liu</b>, Yan Xi, Gouenou Coatrieux, Jean-Louis Coatrieux, Xu Ji, Liang Jiang, Yang Chen</span>
+                  <br>
+                  Medical Image Analysis (MIA), 2024
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div> -->
+            <!-- <div class="publication-item">
+              <div class="image-container">
+                <img src="image/TMI.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Pathological Asymmetry-Guided Progressive Learning for Acute Ischemic Stroke Infarct Segmentation</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Jiarui Sun, Qiuxuan Li, <b>Yuhao Liu</b>, Yichuan Liu, Gouenou Coatrieux, Jean-Louis Coatrieux, Yang Chen, Jie Lu</span>
+                  <br>
+                  IEEE Transactions on Medical Imaging (TMI), 2024
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div> -->
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/cvpr2024_diffplugin.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <a href="http://nxzhao.com/" target="_blank">Nanxuan Zhao</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
+                  <br>
+                  Computer Vision and Pattern Recognition Conference (CVPR), 2024
+                  <br>
+                  <!-- <a href="Diff-Plugin/index.html" target="_blank">[Project]</a> -->
+                  <a href="https://yuhaoliu7456.github.io/Diff-Plugin/" target="_blank">[Project]</a><a href="https://arxiv.org/abs/2402.00341" target="_blank">[Paper]</a><a href="https://github.com/yuhaoliu7456/Diff-Plugin" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/aaai24_shadow.png" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Recasting Regional Lighting for Shadow Removal</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, Zhanghan Ke, Ke Xu, <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, Zhenwei Wang, Rynson Lau</span>
+                  <br>
+                  Association for the Advancement of Artificial Intelligence (AAAI), 2024 <strong>(Oral)</strong>
+                  <br>
+                  <a href="projects/RRL-Net/index.html" target="_blank">[Project]</a><a href="https://arxiv.org/abs/2402.00341" target="_blank">[Paper]</a><a href="https://github.com/yuhaoliu7456/RRL-Net" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/aaai24_god.png" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Multi-view Dynamic Reflection Prior for Video Glass Surface Detection</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, Jiaying Lin, Ke Xu, Rynson Lau</span>
+                  <br>
+                  Association for the Advancement of Artificial Intelligence (AAAI), 2024
+                  <br>
+                  <!-- <a href="https://github.com/fawnliu/VGSD" target="_blank">[Project]</a> -->
+                  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28148" target="_blank">[Paper]</a><a href="https://github.com/fawnliu/VGSD" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/tip.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Structure-Informed Shadow Removal Networks</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, Qing Guo, Lan Fu, Zhanghan Ke, Ke Xu, Wei Feng, Ivor W Tsang, Rynson Lau</span>
+                  <br>
+                  IEEE Transactions on Image Processing (TIP), 2023
+                  <br>
+                  <!-- <a href="#" target="_blank">[Project]</a> -->
+                  <a href="https://ieeexplore.ieee.org/document/10161148" target="_blank">[Paper]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/referring.png" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Referring Image Segmentation Using Text Supervision</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, Yuqiu Kong, Ke Xu, Lihe Zhang, Baocai Yin, Gerhard Hancke, Rynson Lau</span>
+                  <br>
+                  International Conference on Computer Vision (ICCV), 2023
+                  <br>
+                  <!-- <a href="https://github.com/fawnliu/TRIS" target="_blank">[Project]</a> -->
+                  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_Referring_Image_Segmentation_Using_Text_Supervision_ICCV_2023_paper.pdf" target="_blank">[Paper]</a><a href="https://github.com/fawnliu/tris" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/preset.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Neural Preset for Color Style Transfer</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Zhanghan Ke, <b>Yuhao Liu</b>, Lei Zhu, Nanxuan Zhao, Rynson Lau</span>
+                  <br>
+                  Computer Vision and Pattern Recognition Conference (CVPR), 2023
+                  <br>
+                  <a href="https://zhkkke.github.io/NeuralPreset/" target="_blank">[Project]</a><a href="https://arxiv.org/abs/2303.13511" target="_blank">[Paper]</a><a href="https://github.com/ZHKKKe/NeuralPreset" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/iccv21_timi.jpeg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Tripartite Information Mining and Integration for Image Matting</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, Jiake Xie, Xiao Shi, Yu Qiao, Yujie Huang, Yong Tang, Xin Yang</span>
+                  <br>
+                  International Conference on Computer Vision (ICCV), 2021
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/tmm20.jpg" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Prior-Induced Information Alignment for Image Matting</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, Jiake Xie, Yu Qiao, Yong Tang, Xin Yang</span>
+                  <br>
+                  IEEE Transactions on Multimedia (TMM)
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+                </p>
+              </div>
+            </div>
+            <div class="publication-item">
+              <div class="image-container">
+                <img src="image/papers/cvpr20_matting.png" class="publication-image">
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Attention-Guided Hierarchical Structure Aggregation for Image Matting</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Yu Qiao, <b>Yuhao Liu</b>*, Xin Yang, Dongsheng Zhou, Mingliang Xu, Qiang Zhang, Xiaopeng Wei</span>
+                  <br>
+                  Computer Vision and Pattern Recognition Conference (CVPR), 2020
+                  <br>
+                  <a href="#" target="_blank">[Project]</a>
+          </p>
+          </div>
+            </div>
+
+            <h5 id="Service">Academic Service</h5>
+            <p>
+              <strong>Conference Reviewer:</strong> CVPR, ICCV, ECCV, NeurIPS, ICLR, AAAI
+              <br>
+              <strong>Journal Reviewer:</strong> IEEE TPAMI, IJCV, IEEE TIP
+            </p>
+
+            <h5 id="Awards">Awards</h5>
+            <p>
+              Research Tuition Scholarship, 2024-2025
+              <br>
+              China National Scholarship (Rate ≤ 0.01%), 2021-2022
+              <br>
+              China National Scholarship (Rate ≤ 0.01%), 2017-2018
+              <br>
+              Southern Airlines Scholarship (Rate ≤ 0.01%), 2016-2017
+            </p>
+
+          </section>
+        </div>
+      </article>
+          </div>
+
+    <div class="page__footer">
+      <footer>
+        <div class="page__footer-copyright">&copy; 2025 Yuhao Liu. Last updated: Jan. 3, 2025</div>
+        <div class="page__footer-copyright">Thanks for the templates from <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a></div>
+      </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks">
+  <meta name="keywords" content="Diffusion, Low-level Vision, Computer Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks</h1>
+            <h2 class="subtitle is-3 publication-subtitle">CVPR 2024</h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yuhaoliu7456.github.io/">Yuhao Liu</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://zhke.io/">Zhanghan Ke</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en">Fang Liu</a><sup>1</sup>,
+              </span>
+                <span class="author-block">
+                <a href="http://nxzhao.com/">Nanxuan Zhao</a><sup>2</sup>,
+              </span>
+                <span class="author-block">
+                <a href="https://www.cs.cityu.edu.hk/~rynson/">Rynson W.H. Lau</a><sup>1</sup>
+              </span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>City University of Hong Kong,</span>
+              <span class="author-block"><sup>2</sup>Adobe Research</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.00644" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                  <span class="link-block">
+                  <a href="https://github.com/yuhaoliu7456/Diff-Plugin"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Demo Link. -->
+                  <span class="link-block">
+                  <a href="https://github.com/yuhaoliu7456/Diff-Plugin/?tab=readme-ov-file#gradio-demo"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-desktop"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <img src="teaser.png" class="interpolation-image" style="width: 100%;" />
+            <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+              Real-world applications of Diff-Plugin visualized across distinct single-type and one multi-type low-level vision tasks. 
+              Diff-Plugin allows users to selectively conduct interested low-level vision tasks via natural languages and can generate high-fidelity results.
+            </h2>
+          </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+  <section class="section">
+  <div class="container is-max-desktop">
+      <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+              Diffusion models have demonstrated impressive capabilities in image generation and have been effectively 
+              adapted for image restoration tasks. However, despite their success, diffusion models often struggle to 
+              generate images with sufficient detail, particularly in complex scenarios. This limitation becomes more 
+              pronounced in image restoration, where the goal is to recover fine details from degraded inputs. To address 
+              this challenge, we propose Diff-Plugin, a training-free method that leverages the generation capability of 
+              pre-trained diffusion models for low-level tasks while incorporating a plugin module to enhance detail generation. 
+              Our approach utilizes a lightweight plugin trained specifically on pairs of low-quality and high-quality images 
+              to refine the outputs of diffusion models. The plugin is designed to revitalize the details that diffusion 
+              models may overlook, thereby improving the overall quality of restored images. Extensive experiments on various 
+              image restoration tasks, including denoising, deblurring, super-resolution, and deraining, demonstrate the 
+              effectiveness of our method in enhancing detail recovery while maintaining the advantageous properties of 
+              diffusion models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method Overview</h2>
+      <div class="content has-text-centered">
+        <img src="more.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 20px; text-align: justify;">
+          Overview of our Diff-Plugin framework. We leverage pre-trained diffusion models and introduce a lightweight 
+          plugin network to enhance detail generation for low-level vision tasks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      
+      <!-- Denoising Results -->
+      <h3 class="title is-4">Denoising</h3>
+      <div class="content has-text-centered">
+        <img src="derain.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 10px; text-align: justify;">
+          Comparison results on image denoising tasks. Our method achieves superior detail recovery compared to existing approaches.
+        </p>
+      </div>
+
+      <!-- Face Restoration Results -->
+      <h3 class="title is-4">Face Restoration</h3>
+      <div class="content has-text-centered">
+        <img src="face.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 10px; text-align: justify;">
+          Face restoration results showing improved detail preservation and natural-looking outputs.
+        </p>
+      </div>
+
+      <!-- Gradio Demo -->
+      <h3 class="title is-4">Interactive Demo</h3>
+      <div class="content has-text-centered">
+        <img src="gradio.png" class="interpolation-image" style="width: 100%;" />
+        <p style="margin-top: 10px; text-align: justify;">
+          Our interactive Gradio demo allows users to test different low-level vision tasks with natural language instructions.
+        </p>
+      </div>
+    </div>
+</section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Demo Video</h2>
+      <div class="content has-text-centered">
+        <video controls autoplay muted loop playsinline width="100%">
+          <source src="demo.mp4" type="video/mp4">
+	    </video>
+        <p style="margin-top: 10px; text-align: justify;">
+          Demonstration video showing the capabilities of Diff-Plugin across various low-level vision tasks.
+        </p>
+      </div>
+  </div>
+</section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{liu2024diffplugin,
+  title={Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks},
+  author={Liu, Yuhao and Ke, Zhanghan and Liu, Fang and Zhao, Nanxuan and Lau, Rynson W.H.},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/yuhaoliu7456/Diff-Plugin" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This webpage template is based on <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We sincerely thank the authors for sharing the template.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
