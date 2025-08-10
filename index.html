@@ -16,9 +16,11 @@
     <meta http-equiv="cleartype" content="on">
     <style>
       .publication-authors {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        word-wrap: break-word;
+        line-height: 1.4;
       }
       .publication-authors br {
         display: none;
@@ -26,10 +28,11 @@
       .publication-image {
         width: 200px !important;
         height: 100px !important;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         vertical-align: top;
+        background-color: #f8f9fa;
       }
       .publication-item {
         width: 100%;
@@ -40,6 +43,11 @@
       .publication-item .image-container {
         flex: 0 0 200px;
         margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 100px;
       }
       .publication-item .content-container {
         flex: 1;
@@ -159,6 +167,8 @@
               <li><a href="mailto:yuhaoliu7456@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> yuhaoliu7456@gmail.com</a></li>
               <li><a href="https://github.com/yuhaoliu7456" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i> https://github.com/yuhaoliu7456</a></li>
               <li><a href="https://scholar.google.com.hk/citations?user=eHWiGU8AAAAJ&hl=en"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+              <li><a href="https://x.com/LeoLau_yuhao" target="_blank"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://www.linkedin.com/in/leo-yuhao/" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
             </ul>
           </div>
         </div>
@@ -174,13 +184,14 @@
               My recent research interests focus on <strong>World Model</strong>. 
               I'm open to collaborations and discussions, so feel free to drop me an email if you're interested.</p>
 
-            <p style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #2196F3; margin: 15px 0;">
+            <!-- <p style="background-color: #f0f8ff; padding: 10px; border-left: 4px solid #2196F3; margin: 15px 0;">
               <strong>[May. 2025]</strong> I am actively seeking job opportunities. If you think I'm a good fit, please contact me via <a href="mailto:yuhaoliu7456@gmail.com">yuhaoliu7456@gmail.com</a>
-            </p>
+            </p> -->
 
             <h5 id="News">News</h5>
             <div class="news-container">
               <ul>
+                <li>[2025.08] 2 papers were accepted by Siggraph Asia 2025.</li>
                 <li>[2025.07] Our Hunyuan world 1.0 is released.</li>
                 <li>[2025.02] 2 papers were accepted by CVPR 2025.</li>
                 <li>[2024.09] 1 paper was accepted by NeurIPS 2024.</li>
@@ -225,7 +236,77 @@
             <p style="font-size:14px; color:#666; margin-bottom:20px; font-style:italic;">
               * denotes joint first author; † denotes corresponding author
             </p>
-            
+
+            <div class="publication-item">
+              <div class="image-container">
+                <video src="https://shapeformotion.github.io/video/demo.mp4" class="publication-image" controls muted loop autoplay>
+                  <!-- <source src="https://shapeformotion.github.io/video/demo.mp4" type="video/mp4"> -->
+                  <!-- Your browser does not support the video tag. -->
+                </video>
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Shape-for-Motion: Precise and Consistent Video Editing with 3D Proxy</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors"><b>Yuhao Liu</b>, 
+                    <a href="https://tengfei-wang.github.io/" target="_blank">Tengfei Wang</a>, 
+                    <a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, 
+                    <a href="https://zhenwwang.github.io/" target="_blank">Zhenwei Wang</a>, 
+                    <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
+                  <br>
+                  <a href="https://shapeformotion.github.io/" target="_blank">[Project]</a>
+                  <a href="https://arxiv.org/abs/2506.22432" target="_blank">[Paper]</a>
+                  <a href="https://github.com/yuhaoliu7456/Shape-for-Motion" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="publication-item">
+              <div class="image-container">
+                <video src="image/Hocomp.mp4" class="publication-image" controls muted loop autoplay></video>
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">HOComp: Interaction-Aware Human-Object Composition</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">Dong Liang, 
+                  Jinyuan Jia, 
+                  <b>Yuhao Liu†</b>, 
+                  <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank"></a>Rynson Lau</a></span>
+                  <br>
+                  <a href="https://dliang293.github.io/HOComp-project/" target="_blank">[Project]</a>
+                  <a href="https://arxiv.org/abs/2507.16813" target="_blank">[Paper]</a>
+                  <a href="https://github.com/dliang293/HOComp" target="_blank">[Code]</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="publication-item">
+              <div class="image-container">
+                <video src="https://cdn-uploads.huggingface.co/production/uploads/63425d394c9a81858b36aeb5/cjZH2kR6B3y9IAmmRHNJS.mp4" class="publication-image" controls muted loop autoplay></video>
+              </div>
+              <div class="content-container">
+                <h6 style="font-size:17px;">Voyager: Long-Range and World-Consistent Video Diffusion for
+                  Explorable 3D Scene Generation</h6>
+                <p style="font-size:16px;">
+                  <span class="publication-authors">
+                    <a href="https://tyhuang0428.github.io/" target="_blank">Tianyu huang</a>, 
+                    <a href="https://wangguandongzheng.github.io/" target="_blank">Guandong</a>, 
+                    <a href="https://tengfei-wang.github.io/" target="_blank">Tengfei Wang</a>, 
+                    <b>Yuhao Liu</b>, 
+                    <a href="https://zhenwwang.github.io/" target="_blank">Zhenwei Wang</a>, 
+                    <a href="" target="_blank"></a>Junta Wu</a>,
+                    <a href="" target="_blank">Jie Jiang</a>,
+                    <a href="" target="_blank">Hui Li</a>,
+                    <a href="https://homepage.hit.edu.cn/wangmengzuo/" target="_blank">Wangmeng Zuo</a>,
+                    <a href="" target="_blank">Chunchao Guo</a>
+                  </span>
+                  <br>
+                  <a href="https://arxiv.org/pdf/2506.04225" target="_blank">[Paper]</a>
+                  
+                </p>
+              </div>
+            </div>
+
             <div class="publication-item">
               <div class="image-container">
                 <img src="image/hunyuan-world-1.0.png" class="publication-image">
@@ -233,9 +314,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Zhenwei Wang, <b>Yuhao Liu</b>*, Junta Wu, Zixiao Gu, Haoyuan Wang, Xuhui Zuo, </span>
-                  <br>
-                  Tianyu Huang, Wenhuan Li, ..., Tengfei Wang, Chunchao Guo
+                  <span class="publication-authors"><b>Yuhao Liu (Core Contributor)</b></span>
                   <br>
                   <a href="https://huggingface.co/tencent/HunyuanWorld-1" target="_blank">[Project]</a>
                   <a href="https://arxiv.org/abs/2507.21809" target="_blank">[Paper]</a>
@@ -252,11 +331,12 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">VODiff: Controlling Object Visibility Order in Text-to-Image Generation</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Dong Liang, Jinyuan Jia, <b>Yuhao Liu</b>†, Zhanghan Ke, Hongbo Fu, Rynson W. H. Lau</span>
+                  <span class="publication-authors">Dong Liang, Jinyuan Jia, <b>Yuhao Liu</b>†, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://hongbofu.people.ust.hk/" target="_blank">Hongbo Fu</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson W. H. Lau</a></span>
                   <br>
                   Computer Vision and Pattern Recognition Conference (CVPR), 2025
                   <br>
-                  <a href="#" target="_blank">[Project]</a>
+                  <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Liang_VODiff_Controlling_Object_Visibility_Order_in_Text-to-Image_Generation_CVPR_2025_paper.pdf" target="_blank">[Paper]</a>
+                  <a href="https://github.com/dliang293/VODiff" target="_blank">[Code]</a>
                 </p>
               </div>
             </div>
@@ -268,7 +348,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Language-Guided Salient Object Ranking</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Fang Liu, <b>Yuhao Liu</b>, Ke Xu, Shuquan Ye, Gerhard Petrus Hancke, Rynson W. H. Lau</span>
+                  <span class="publication-authors"><a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>, <a href="https://kkbless.github.io/" target="_blank">Ke Xu</a>, <a href="https://shuquanye.com/" target="_blank">Shuquan Ye</a>, Gerhard Petrus Hancke, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson W. H. Lau</a></span>
                   <br>
                   Computer Vision and Pattern Recognition Conference (CVPR), 2025
                   <br>
@@ -283,12 +363,13 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Weakly Supervised Referring Image Segmentation via Progressive Comprehension</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Zaiquan Yang, <b>Yuhao Liu</b>†, Jiaying Lin, Gerhard Petrus Hancke, Rynson W. H. Lau</span>
+                  <span class="publication-authors">Zaiquan Yang, <b>Yuhao Liu</b>†, <a href="https://jiaying.link/" target="_blank">Jiaying Lin</a>, Gerhard Petrus Hancke, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson W. H. Lau</a></span>
                   <br>
                   Advances in Neural Information Processing Systems (NeurIPS), 2024
                   <br>
                   <!-- <a href="#" target="_blank">[Project]</a> -->
                   <a href="https://arxiv.org/abs/2410.01544" target="_blank">[Paper]</a>
+                  <a href="https://github.com/zaiquanyang/Boosting_WRIS" target="_blank">[Code]</a>
                 </p>
               </div>
             </div>
@@ -329,7 +410,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Diff-Plugin: Revitalizing Details for Diffusion-based Low-level Tasks</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><b>Yuhao Liu</b>, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <a href="http://nxzhao.com/" target="_blank">Nanxuan Zhao</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
+                  <span class="publication-authors"><b>Yuhao Liu</b>, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, <a href="http://nxzhao.com/" target="_blank">Nanxuan Zhao</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   Computer Vision and Pattern Recognition Conference (CVPR), 2024
                   <br>
@@ -345,11 +426,13 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Recasting Regional Lighting for Shadow Removal</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><b>Yuhao Liu</b>, Zhanghan Ke, Ke Xu, <a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, Zhenwei Wang, Rynson Lau</span>
+                  <span class="publication-authors"><b>Yuhao Liu</b>, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://kkbless.github.io/" target="_blank">Ke Xu</a>, <a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, <a href="https://zhenwwang.github.io/" target="_blank">Zhenwei Wang</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   Association for the Advancement of Artificial Intelligence (AAAI), 2024 <strong>(Oral)</strong>
                   <br>
-                  <a href="projects/RRL-Net/index.html" target="_blank">[Project]</a><a href="https://arxiv.org/abs/2402.00341" target="_blank">[Paper]</a><a href="https://github.com/yuhaoliu7456/RRL-Net" target="_blank">[Code]</a>
+                  <a href="projects/RRL-Net/index.html" target="_blank">[Project]</a>
+                  <a href="https://arxiv.org/abs/2402.00341" target="_blank">[Paper]</a>
+                  <a href="https://github.com/yuhaoliu7456/RRL-Net" target="_blank">[Code]</a>
                 </p>
               </div>
             </div>
@@ -360,7 +443,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Multi-view Dynamic Reflection Prior for Video Glass Surface Detection</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, Jiaying Lin, Ke Xu, Rynson Lau</span>
+                  <span class="publication-authors"><a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, <a href="https://jiaying.link/" target="_blank">Jiaying Lin</a>, <a href="https://kkbless.github.io/" target="_blank">Ke Xu</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   Association for the Advancement of Artificial Intelligence (AAAI), 2024
                   <br>
@@ -376,7 +459,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Structure-Informed Shadow Removal Networks</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><b>Yuhao Liu</b>, Qing Guo, Lan Fu, Zhanghan Ke, Ke Xu, Wei Feng, Ivor W Tsang, Rynson Lau</span>
+                  <span class="publication-authors"><b>Yuhao Liu</b>, <a href="https://tsingqguo.github.io/" target="_blank">Qing Guo</a>, <a href="https://scholar.google.com/citations?user=RntkSRIAAAAJ&hl=zh-CN" target="_blank">Lan Fu</a>, <a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <a href="https://kkbless.github.io/" target="_blank">Ke Xu</a>, <a href="https://cic.tju.edu.cn/faculty/fengwei/index.html" target="_blank">Wei Feng</a>, <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang" target="_blank">Ivor W Tsang</a>, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   IEEE Transactions on Image Processing (TIP), 2023
                   <br>
@@ -392,7 +475,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Referring Image Segmentation Using Text Supervision</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><a href="https://scholar.google.com/citations?user=cBFup5QAAAAJ&hl=en" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, Yuqiu Kong, Ke Xu, Lihe Zhang, Baocai Yin, Gerhard Hancke, Rynson Lau</span>
+                  <span class="publication-authors"><a href="https://fawnliu.github.io/" target="_blank">Fang Liu</a>, <b>Yuhao Liu</b>*, Yuqiu Kong, <a href="https://kkbless.github.io/" target="_blank">Ke Xu</a>, <a href="https://scholar.google.com/citations?user=XGPdQbIAAAAJ&hl=zh-CN" target="_blank">Lihe Zhang</a>, <a href="https://scholar.google.com/citations?user=uXtYy_8AAAAJ&hl=zh-CN" target="_blank">Baocai Yin</a>, Gerhard Hancke, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   International Conference on Computer Vision (ICCV), 2023
                   <br>
@@ -408,7 +491,7 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Neural Preset for Color Style Transfer</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Zhanghan Ke, <b>Yuhao Liu</b>, Lei Zhu, Nanxuan Zhao, Rynson Lau</span>
+                  <span class="publication-authors"><a href="https://zhke.io/" target="_blank">Zhanghan Ke</a>, <b>Yuhao Liu</b>, <a href="https://rayleizhu.github.io/" target="_blank">Lei Zhu</a>, Nanxuan Zhao, <a href="https://www.cs.cityu.edu.hk/~rynson/" target="_blank">Rynson Lau</a></span>
                   <br>
                   Computer Vision and Pattern Recognition Conference (CVPR), 2023
                   <br>
@@ -423,26 +506,12 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Tripartite Information Mining and Integration for Image Matting</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors"><b>Yuhao Liu</b>, Jiake Xie, Xiao Shi, Yu Qiao, Yujie Huang, Yong Tang, Xin Yang</span>
+                  <span class="publication-authors"><b>Yuhao Liu</b>, Jiake Xie, Xiao Shi, Yu Qiao, Yujie Huang, Yong Tang, <a href="https://xinyangdut.github.io/" target="_blank">Xin Yang</a></span>
                   <br>
                   International Conference on Computer Vision (ICCV), 2021
                   <br>
-                  <a href="#" target="_blank">[Project]</a>
-                </p>
-              </div>
-            </div>
-            <div class="publication-item">
-              <div class="image-container">
-                <img src="image/papers/tmm20.jpg" class="publication-image">
-              </div>
-              <div class="content-container">
-                <h6 style="font-size:17px;">Prior-Induced Information Alignment for Image Matting</h6>
-                <p style="font-size:16px;">
-                  <span class="publication-authors"><b>Yuhao Liu</b>, Jiake Xie, Yu Qiao, Yong Tang, Xin Yang</span>
-                  <br>
-                  IEEE Transactions on Multimedia (TMM)
-                  <br>
-                  <a href="#" target="_blank">[Project]</a>
+                  <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Tripartite_Information_Mining_and_Integration_for_Image_Matting_ICCV_2021_paper.pdf" target="_blank">[Paper]</a>
+                  <a href="https://github.com/kelisiya/TIMI-Net" target="_blank">[Code]</a>
                 </p>
               </div>
             </div>
@@ -453,11 +522,12 @@
               <div class="content-container">
                 <h6 style="font-size:17px;">Attention-Guided Hierarchical Structure Aggregation for Image Matting</h6>
                 <p style="font-size:16px;">
-                  <span class="publication-authors">Yu Qiao, <b>Yuhao Liu</b>*, Xin Yang, Dongsheng Zhou, Mingliang Xu, Qiang Zhang, Xiaopeng Wei</span>
+                  <span class="publication-authors">Yu Qiao, <b>Yuhao Liu</b>*, <a href="https://xinyangdut.github.io/" target="_blank">Xin Yang</a>, Dongsheng Zhou, <a href="https://scholar.google.com/citations?user=u-8x34cAAAAJ&hl=en" target="_blank">Mingliang Xu</a>, Qiang Zhang, Xiaopeng Wei</span>
                   <br>
                   Computer Vision and Pattern Recognition Conference (CVPR), 2020
                   <br>
-                  <a href="#" target="_blank">[Project]</a>
+                  <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Qiao_Attention-Guided_Hierarchical_Structure_Aggregation_for_Image_Matting_CVPR_2020_paper.pdf" target="_blank">[Paper]</a>
+                  <a href="https://github.com/liuyuhao-zju/TIMI" target="_blank">[Code]</a>
           </p>
           </div>
             </div>
